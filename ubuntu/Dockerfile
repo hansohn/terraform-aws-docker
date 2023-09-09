@@ -90,7 +90,7 @@ COPY --from=builder /root/.tflint.hcl /root/
 COPY --from=builder /usr/local/aws-cli/ /usr/local/aws-cli/
 COPY --from=builder /usr/local/bin/ /usr/local/bin/
 RUN /bin/bash -c 'terraform --version'
-RUN echo $'\n\
+RUN echo '\n\
 complete -C /usr/local/bin/aws_completer aws' >> /root/.bashrc
 
 ENTRYPOINT []

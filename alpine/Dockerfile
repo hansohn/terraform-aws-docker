@@ -48,6 +48,9 @@ RUN /bin/bash -c 'if [[ "${TFLINT_VERSION}" == "latest" ]]; then TFLINT_VERSION=
       && unzip tflint.zip \
       && mv tflint /usr/local/bin/ \
       && chmod +x /usr/local/bin/tflint \
+      && TFLINT_AWS_VERSION=$(${CURL} "https://api.github.com/repos/terraform-linters/tflint-ruleset-aws/releases/latest" | jq -r .tag_name | sed -e "s:^v::") \
+      && sed -ie "s:TFLINT_AWS_VERSION:$TFLINT_AWS_VERSION:" /root/.tflint.hcl \
+      && GITHUB_TOKEN=${GITHUB_TOKEN:-$(awk "'"c&&!--c;/github.com/{c=2}"'" /root/.netrc | awk "'"{print $2;exit}"'")} \
       && tflint --version \
       && tflint --init'
 

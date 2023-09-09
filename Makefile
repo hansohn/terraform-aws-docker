@@ -17,7 +17,7 @@ REPO_NAME ?= $(shell basename $(CURDIR))
 #-------------------------------------------------------------------------------
 
 DOCKER_USER ?= hansohn
-D$OCKER_REPO ?= terraform-aws
+DOCKER_REPO ?= terraform-aws
 DOCKER_TAG_BASE ?= $(DOCKER_USER)/$(DOCKER_REPO)
 
 DOCTL_VERSION ?= latest
