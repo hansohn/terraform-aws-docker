@@ -33,7 +33,7 @@ jobs:
           echo ${tfver}
           echo tfver=${tfver} >> $GITHUB_OUTPUT
         env:
-          PYTHON_VERSION: 3.12
+          PYTHON_VERSION: 3.11
 
   docker:
     name: ${{ matrix.versions.version }}
