@@ -99,7 +99,7 @@ jobs:
           push: true
           tags: ${{ join(matrix.versions.tags, ',') }}
 
-  rebuild:
+  redeploy:
     name: Rebuild ${{ matrix.versions.version }}
     runs-on: ubuntu-latest
     needs: [ matrix ]
@@ -148,11 +148,11 @@ jobs:
 
   dockerhub:
     runs-on: ubuntu-latest
-    needs: [ matrix, deploy, rebuild ]
+    needs: [ matrix, deploy, redeploy ]
     if: |
       always()
       && !contains(needs.*.result, 'failure')
-      && (contains(needs.deploy.result, 'success') || contains(needs.rebuild.result, 'success'))
+      && (contains(needs.deploy.result, 'success') || contains(needs.redeploy.result, 'success'))
     steps:
       - name: Checkout
         uses: actions/checkout@v4
