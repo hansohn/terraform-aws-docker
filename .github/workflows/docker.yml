@@ -39,7 +39,7 @@ jobs:
     needs: [ matrix ]
     if: |
       github.event_name != 'schedule'
-      || !(github.event_name == 'push' && github.ref_type == 'tag')
+      && !(github.event_name == 'push' && github.ref_type == 'tag')
     strategy:
       matrix:
         versions: ${{ fromJSON(needs.matrix.outputs.versions) }}
