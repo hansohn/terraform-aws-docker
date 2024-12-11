@@ -13,7 +13,7 @@ on:
   workflow_dispatch:
 
 env:
-  BUILD_CONTEXT: '/docker'
+  BUILD_CONTEXT: './docker'
   PYTHON_VERSION: 3.11
 
 jobs:
