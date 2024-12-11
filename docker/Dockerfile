@@ -2,7 +2,7 @@ ARG TERRAFORM_VERSION=latest
 
 
 # builder
-FROM hansohn/terraform:${TERRAFORM_VERSION} as builder
+FROM hansohn/terraform:${TERRAFORM_VERSION} AS builder
 ARG TFLINT_VERSION=latest
 COPY dotfiles/. /root/
 ENV CURL='curl -fsSL --netrc-optional'
@@ -22,15 +22,16 @@ RUN /bin/bash -c 'TFLINT_AWS_VERSION=$(${CURL} "https://api.github.com/repos/ter
       && tflint --init'
 
 # awscli
-ADD https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip /tmp/awscliv2.zip
-RUN /bin/bash -c 'cd /tmp \
+RUN /bin/bash -c 'ARCH=$(uname -m) \
+      && ${CURL} https://awscli.amazonaws.com/awscli-exe-linux-${ARCH}.zip -o /tmp/awscliv2.zip \
+      && cd /tmp \
       && unzip awscliv2.zip \
       && ./aws/install --bin-dir /aws-cli-bin/ \
       && /aws-cli-bin/aws --version'
 
 
 # main
-FROM hansohn/terraform:${TERRAFORM_VERSION} as main
+FROM hansohn/terraform:${TERRAFORM_VERSION} AS main
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install --no-install-recommends -y \
       bash \
@@ -50,7 +51,6 @@ COPY --from=builder /root/.tflint.hcl /root/
 COPY --from=builder /usr/local/aws-cli/ /usr/local/aws-cli/
 COPY --from=builder /usr/local/bin/ /usr/local/bin/
 RUN /bin/bash -c 'terraform --version'
-RUN echo '\n\
-complete -C /usr/local/bin/aws_completer aws' >> /root/.bashrc
+RUN printf '\ncomplete -C /usr/local/bin/aws_completer aws\n' >> /root/.bashrc
 
 ENTRYPOINT []
