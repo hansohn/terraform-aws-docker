@@ -3,21 +3,17 @@
   <p>Terraform AWS Docker image</p>
   <p>
     <!-- Build Status -->
-    <a href="https://actions-badge.atrox.dev/hansohn/terraform-aws-docker/goto?ref=main">
-      <img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fhansohn%2Fterraform-aws-docker%2Fbadge%3Fref%3Dmain&style=for-the-badge">
-    </a>
+    <a style="text-decoration:none;" class="imageLink" href="https://github.com/hansohn/terraform-aws-docker/actions/workflows/docker.yml">
+      <img src="https://img.shields.io/github/actions/workflow/status/hansohn/terraform-aws-docker/docker.yml?style=for-the-badge"></a>
     <!-- Github Tag -->
-    <a href="https://gitHub.com/hansohn/terraform-aws-docker/tags/">
-      <img src="https://img.shields.io/github/tag/hansohn/terraform-aws-docker.svg?style=for-the-badge">
-    </a>
+    <a style="text-decoration:none;" class="imageLink" href="https://gitHub.com/hansohn/terraform-aws-docker/tags/">
+      <img src="https://img.shields.io/github/tag/hansohn/terraform-aws-docker.svg?style=for-the-badge"></a>
     <!-- License -->
-    <a href="https://github.com/hansohn/terraform-aws-docker/blob/main/LICENSE">
-      <img src="https://img.shields.io/github/license/hansohn/terraform-aws-docker.svg?style=for-the-badge">
-    </a>
+    <a style="text-decoration:none;" class="imageLink" href="https://github.com/hansohn/terraform-aws-docker/blob/main/LICENSE">
+      <img src="https://img.shields.io/github/license/hansohn/terraform-aws-docker.svg?style=for-the-badge"></a>
     <!-- LinkedIn -->
-    <a href="https://linkedin.com/in/ryanhansohn">
-      <img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555">
-    </a>
+    <a style="text-decoration:none;" class="imageLink" href="https://linkedin.com/in/ryanhansohn">
+      <img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555"></a>
   </p>
 </div>
 
@@ -60,7 +56,7 @@ Published images can be run using the following syntax
 
 ```
 # run latest published version
-$ docker run -it --rm hansohn/terraform-aws:latest /bin/bash
+docker run -it --rm hansohn/terraform-aws:latest /bin/bash
 ```
 
 Local images can be built and run using the following syntax
