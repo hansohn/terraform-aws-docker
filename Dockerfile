@@ -8,7 +8,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 # renovate: datasource=github-releases depName=terraform-linters/tflint-ruleset-aws extractVersion=^v(?<version>.+)$
 ARG TFLINT_AWS_VERSION=0.48.0
 # renovate: datasource=github-tags depName=aws/aws-cli
-ARG AWSCLI_VERSION=2.35.23
+ARG AWSCLI_VERSION=2.35.24
 # AWS CLI installer packages are PGP-signed by the AWS CLI Team key. Trust is
 # pinned to this fingerprint; the current public key (with up-to-date expiry) is
 # fetched from a keyserver at build time so extensions don't require a rebuild.
