@@ -1,27 +1,17 @@
 <div align="center">
-  <h3>terraform-aws-docker</h3>
+  <h1>terraform-aws-docker</h1>
   <p>Terraform AWS Docker image</p>
   <p>
     <!-- Build Status -->
-    <a href="https://actions-badge.atrox.dev/hansohn/terraform-aws-docker/goto?ref=main">
-      <img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fhansohn%2Fterraform-aws-docker%2Fbadge%3Fref%3Dmain&style=for-the-badge">
-    </a>
+    <a href="https://actions-badge.atrox.dev/hansohn/terraform-aws-docker/goto?ref=main"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fhansohn%2Fterraform-aws-docker%2Fbadge%3Fref%3Dmain&style=for-the-badge"></a>
     <!-- Github Tag -->
-    <a href="https://gitHub.com/hansohn/terraform-aws-docker/tags/">
-      <img src="https://img.shields.io/github/tag/hansohn/terraform-aws-docker.svg?style=for-the-badge">
-    </a>
+    <a href="https://gitHub.com/hansohn/terraform-aws-docker/tags/"><img src="https://img.shields.io/github/tag/hansohn/terraform-aws-docker.svg?style=for-the-badge"></a>
     <!-- Docker Pulls -->
-    <a href="https://hub.docker.com/r/hansohn/terraform-aws">
-      <img src="https://img.shields.io/docker/pulls/hansohn/terraform-aws.svg?style=for-the-badge">
-    </a>
+    <a href="https://hub.docker.com/r/hansohn/terraform-aws"><img src="https://img.shields.io/docker/pulls/hansohn/terraform-aws.svg?style=for-the-badge"></a>
     <!-- Docker Image Size -->
-    <a href="https://hub.docker.com/r/hansohn/terraform-aws">
-      <img src="https://img.shields.io/docker/image-size/hansohn/terraform-aws/latest.svg?style=for-the-badge">
-    </a>
+    <a href="https://hub.docker.com/r/hansohn/terraform-aws"><img src="https://img.shields.io/docker/image-size/hansohn/terraform-aws/latest.svg?style=for-the-badge"></a>
     <!-- License -->
-    <a href="https://github.com/hansohn/terraform-aws-docker/blob/main/LICENSE">
-      <img src="https://img.shields.io/github/license/hansohn/terraform-aws-docker.svg?style=for-the-badge">
-    </a>
+    <a href="https://github.com/hansohn/terraform-aws-docker/blob/main/LICENSE"><img src="https://img.shields.io/github/license/hansohn/terraform-aws-docker.svg?style=for-the-badge"></a>
   </p>
 </div>
 
