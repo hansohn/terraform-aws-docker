@@ -6,7 +6,7 @@ ARG TERRAFORM_VERSION=1.16.4
 FROM hansohn/terraform:${TERRAFORM_VERSION} AS builder
 ARG DEBIAN_FRONTEND=noninteractive
 # renovate: datasource=github-releases depName=terraform-linters/tflint-ruleset-aws extractVersion=^v(?<version>.+)$
-ARG TFLINT_AWS_VERSION=0.49.0
+ARG TFLINT_AWS_VERSION=0.50.0
 # renovate: datasource=github-tags depName=aws/aws-cli
 ARG AWSCLI_VERSION=2.38.3
 # AWS CLI installer packages are PGP-signed by the AWS CLI Team key. Trust is
